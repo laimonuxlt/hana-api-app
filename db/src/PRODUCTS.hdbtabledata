@@ -1,0 +1,17 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "PRODUCTS",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "PRODUCTS.csv",
+        "has_header": true,
+        "delimiter": ","
+      },
+      "import_settings": {
+        "import_columns": ["ID", "NAME", "CATEGORY", "PRICE", "STOCK"]
+      }
+    }
+  ]
+}

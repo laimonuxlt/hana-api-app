@@ -1,0 +1,22 @@
+_schema-version: "3.2"
+ID: hana-api-app
+version: 0.0.1
+modules:
+- name: db
+  type: hdb
+  path: db
+  requires:
+  - name: hdi_db
+- name: srv
+  type: nodejs
+  path: srv
+  requires:
+  - name: hdi_db
+resources:
+- name: hdi_db
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      schema: hana_api_app_laimonas_samalius
+  properties:
+    hdi-container-name: ${service-name}
