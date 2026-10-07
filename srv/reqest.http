@@ -1,0 +1,53 @@
+### Health check
+GET http://localhost:3015/health-check
+
+### 1. GET all products
+GET http://localhost:3015/api/products
+
+### 2. POST - create a new product
+POST http://localhost:3015/api/products
+Content-Type: application/json
+
+{
+  "id": 100,
+  "name": "Monitor",
+  "category": "Electronics",
+  "price": 199.99,
+  "stock": 10
+}
+
+### 3. GET all products (should include ID 100)
+GET http://localhost:3015/api/products
+
+### 4. GET single product by ID
+GET http://localhost:3015/api/products/100
+
+### 5. PUT - update the product
+PUT http://localhost:3015/api/products/100
+Content-Type: application/json
+
+{
+  "name": "Monitor 27 inch",
+  "category": "Electronics",
+  "price": 229.99,
+  "stock": 8
+}
+
+### 6. GET to verify the update
+GET http://localhost:3015/api/products/100
+
+### 7. DELETE the product
+DELETE http://localhost:3015/api/products/100
+
+### 8. GET to verify deletion (expect 404)
+GET http://localhost:3015/api/products/100
+
+### Extra: validation error (expect 400, missing name)
+POST http://localhost:3015/api/products
+Content-Type: application/json
+
+{
+  "id": 101
+}
+
+### Extra: duplicate ID (run request 2 twice, second call expects 409)
