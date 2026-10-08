@@ -1,14 +1,14 @@
 {
   "name": "srv",
   "version": "1.0.0",
-  "description": "",
+  "description": "REST API for SAP HANA Cloud PRODUCTS table",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Laimonas Samalius",
   "license": "ISC",
   "type": "module",
   "dependencies": {
